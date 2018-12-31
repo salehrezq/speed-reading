@@ -66,8 +66,7 @@ import javax.swing.text.Document;
  *
  * @author S
  */
-public class SpeedReading extends JPanel
-{
+public class SpeedReading extends JPanel {
 
    int testInt = 0;
    ///
@@ -184,8 +183,7 @@ public class SpeedReading extends JPanel
    boolean fullScreen = false;
    ////
 
-   public SpeedReading()
-   {
+    public SpeedReading()   {
       label = new JLabel();
       label.setOpaque(true);
       label.setVerticalAlignment(JLabel.CENTER);
@@ -279,7 +277,7 @@ public class SpeedReading extends JPanel
       ToolTipManager.sharedInstance().setDismissDelay(1500);// 1.5 seconds  
       ToolTipManager.sharedInstance().setInitialDelay(150);
       //////
-      URL imageurl = getClass().getResource("/speadreading/fullscreen.png");
+      URL imageurl = getClass().getResource("/speedreading/fullscreen.png");
       Image myPicture = Toolkit.getDefaultToolkit().getImage(imageurl);
       
       btn_fullscreen = new JButton(new ImageIcon(myPicture));
@@ -1902,7 +1900,7 @@ public class SpeedReading extends JPanel
       int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
       int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
       frame.setLocation(windowX, windowY);
-      frame.add(new SpeedReading(), BorderLayout.CENTER);
+       frame.add(new SpeedReading(), BorderLayout.CENTER);
       //Display the window.
       //frame.pack();
       frame.setVisible(true);
