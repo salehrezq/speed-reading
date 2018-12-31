@@ -36,26 +36,26 @@ public class ColorChanger implements ActionListener, ChangeListener
     {
         backgroundColor = new Color(255, 255, 255);
         textColor = new Color(0, 0, 0);
-        SpeadReading.label.setBackground(backgroundColor);
-        SpeadReading.label.setForeground(textColor);
+        SpeedReading.label.setBackground(backgroundColor);
+        SpeedReading.label.setForeground(textColor);
         ////
-        SpeadReading.backGroundColorItem.addActionListener(this);
-        SpeadReading.backGroundColorItem.addChangeListener(this);
+        SpeedReading.backGroundColorItem.addActionListener(this);
+        SpeedReading.backGroundColorItem.addChangeListener(this);
         //////////
-        SpeadReading.textColorItem.addActionListener(this);
-        SpeadReading.textColorItem.addChangeListener(this);
+        SpeedReading.textColorItem.addActionListener(this);
+        SpeedReading.textColorItem.addChangeListener(this);
 
-        colorChoBackground = new JColorChooser(SpeadReading.label.getBackground());
-        colorChoText = new JColorChooser(SpeadReading.label.getForeground());
+        colorChoBackground = new JColorChooser(SpeedReading.label.getBackground());
+        colorChoText = new JColorChooser(SpeedReading.label.getForeground());
 
-        dialogBackground = JColorChooser.createDialog(SpeadReading.backGroundColorItem,
+        dialogBackground = JColorChooser.createDialog(SpeedReading.backGroundColorItem,
                 "Pick a Color",
                 true, //modal
                 colorChoBackground,
                 this, //OK button handler
                 null); //no CANCEL button handler
 
-        dialogText = JColorChooser.createDialog(SpeadReading.textColorItem,
+        dialogText = JColorChooser.createDialog(SpeedReading.textColorItem,
                 "Pick a Color",
                 true, //modal
                 colorChoText,
@@ -67,12 +67,12 @@ public class ColorChanger implements ActionListener, ChangeListener
     public void actionPerformed(ActionEvent e)
     {
         Object source = e.getSource();
-        if (source == SpeadReading.backGroundColorItem)
+        if (source == SpeedReading.backGroundColorItem)
         {
             System.out.println("background color");
             dialogBackground.setVisible(true);
         }
-        if (source == SpeadReading.textColorItem)
+        if (source == SpeedReading.textColorItem)
         {
             System.out.println("Text color");
             dialogText.setVisible(true);
@@ -83,15 +83,15 @@ public class ColorChanger implements ActionListener, ChangeListener
     public void stateChanged(ChangeEvent e)
     {
         Object source = e.getSource();
-        if (source == SpeadReading.backGroundColorItem)
+        if (source == SpeedReading.backGroundColorItem)
         {
             backgroundColor = colorChoBackground.getColor();
-            SpeadReading.label.setBackground(backgroundColor);
+            SpeedReading.label.setBackground(backgroundColor);
         }
-        if (source == SpeadReading.textColorItem)
+        if (source == SpeedReading.textColorItem)
         {
             textColor = colorChoText.getColor();
-            SpeadReading.label.setForeground(textColor);
+            SpeedReading.label.setForeground(textColor);
         }
     }
 }

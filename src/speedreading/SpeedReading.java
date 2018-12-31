@@ -66,7 +66,7 @@ import javax.swing.text.Document;
  *
  * @author S
  */
-public class SpeadReading extends JPanel
+public class SpeedReading extends JPanel
 {
 
    int testInt = 0;
@@ -184,7 +184,7 @@ public class SpeadReading extends JPanel
    boolean fullScreen = false;
    ////
 
-   public SpeadReading()
+   public SpeedReading()
    {
       label = new JLabel();
       label.setOpaque(true);
@@ -1902,7 +1902,7 @@ public class SpeadReading extends JPanel
       int windowX = Math.max(0, (screenSize.width - windowSize.width) / 2);
       int windowY = Math.max(0, (screenSize.height - windowSize.height) / 2);
       frame.setLocation(windowX, windowY);
-      frame.add(new SpeadReading(), BorderLayout.CENTER);
+      frame.add(new SpeedReading(), BorderLayout.CENTER);
       //Display the window.
       //frame.pack();
       frame.setVisible(true);

@@ -22,7 +22,7 @@ import javax.swing.JFileChooser;
 public class FileChooser implements ActionListener
 {
 
-    SpeadReading speedReading;
+    SpeedReading speedReading;
     JFileChooser fileChooser;
     File file;
     FileReader fileReader;
@@ -55,7 +55,7 @@ public class FileChooser implements ActionListener
     {
         if (e.getSource() == speedReading.openFileItem)
         {
-            int reternedValue = fileChooser.showOpenDialog(SpeadReading.frame);
+            int reternedValue = fileChooser.showOpenDialog(SpeedReading.frame);
 
             if (reternedValue == JFileChooser.APPROVE_OPTION)
             {
@@ -68,8 +68,8 @@ public class FileChooser implements ActionListener
                     String currentLine = bufferedFileReader.readLine();
                     while (currentLine != null)
                     {
-                        SpeadReading.textArea.append(currentLine);
-                        SpeadReading.textArea.append("\n");
+                        SpeedReading.textArea.append(currentLine);
+                        SpeedReading.textArea.append("\n");
                         currentLine = bufferedFileReader.readLine();
                     }
 
